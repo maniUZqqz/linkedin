@@ -78,12 +78,17 @@ def show(request):
             base_url = f"https://www.linkedin.com/in/{username}/"
             target_urls = [
                 base_url, f"{base_url}recent-activity/all/",
-                f"{base_url}details/education/", f"{base_url}details/skills/",
-                f"{base_url}details/publications/", f"{base_url}details/honors/",
-                f"{base_url}details/languages/", f"{base_url}details/projects/",
+                f"{base_url}details/education/",
+                f"{base_url}details/skills/",
+                f"{base_url}details/publications/",
+                f"{base_url}details/honors/",
+                f"{base_url}details/languages/",
+                f"{base_url}details/projects/",
                 f"{base_url}details/volunteering-experiences/",
-                f"{base_url}details/certifications/", f"{base_url}details/courses/",
-                f"{base_url}details/experience/", f"{base_url}details/organizations/"
+                f"{base_url}details/certifications/",
+                f"{base_url}details/courses/",
+                f"{base_url}details/experience/",
+                f"{base_url}details/organizations/"
             ]
             automation.add_urls_to_queue(target_urls)
             automation.process_queue(connection_string, username)
